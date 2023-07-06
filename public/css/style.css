@@ -1,0 +1,87 @@
+:root {
+    --icon: rgb(211, 210, 208);
+    --blue-bg: rgb(10 8 31);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat";
+}
+
+/* Estilos para los bloques */
+img {
+    width: 100%;
+}
+
+main {
+    margin-top: 17%;
+}
+
+h1 {
+    font-size: 118%;
+    margin-bottom: 4px;
+}
+
+h2 {
+    font-size: 150%;
+    margin-bottom: 6px;
+    background: linear-gradient(42deg, rgba(177, 80, 251, 1) 11%, rgba(118, 130, 237, 1) 50%, rgba(48, 210, 223, 1) 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    transition: background-position 0.5s;
+    text-align: center;
+}
+
+h2:hover {
+    background-position: 100% 0;
+}
+
+p {
+    font-size: 77%;
+    font-weight: 400;
+    margin-top: 7px;
+    line-height: 1.4;
+}
+
+.block {
+    height: 100vh;
+}
+
+.block1 {
+    background: var(--blue-bg);
+    color: white;
+    padding: 70px 39px;
+    text-align: center;
+
+}
+
+.block3 {
+    background: var(--blue-bg);
+    padding: 100px 0; 
+
+}
+#skills{
+    font-size: 230%;
+}
+
+/* Background transition */
+#bgVideo {
+    height: 100vh;
+    width: 100vw;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    object-fit: cover;
+    z-index: -1;
+    /* Movemos el video por debajo del contenido del bloque */
+    background-attachment: fixed;
+}
+
+#navbarNav a,
+.icon-burguer {
+    color: white;
+
+}
