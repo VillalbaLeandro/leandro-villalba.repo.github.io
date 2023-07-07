@@ -11,12 +11,11 @@
     height: 56vh;
     overflow: hidden;
     pointer-events: none;
-  }
-  
-  .carousel-item {
-    --items: 10;
-    --width: clamp(150px, 30vw,  300px);
-    --height: clamp(200px, 40vw,  400px);
+}
+
+.carousel-item {
+    --width: clamp(150px, 30vw, 300px);
+    --height: clamp(200px, 40vw, 400px);
     --x: calc(var(--active) * 800%);
     --y: calc(var(--active) * 200%);
     --rot: calc(var(--active) * 120deg);
@@ -35,7 +34,7 @@
     box-shadow: 0 10px 50px 10px rgba(0, 0, 0, .5);
     background: black;
     pointer-events: all;
-    transform:  translate(var(--x), var(--y)) rotate(var(--rot)) ;
+    transform: translate(var(--x), var(--y)) rotate(var(--rot));
     transition: transform .8s cubic-bezier(0, 0.02, 0, 1);
     /* GLASS EFECT ---- */
 
@@ -47,57 +46,92 @@
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.2); Borde transparente
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); Sombra */
-/* glass efect end--------------- */
-  
-    .carousel-box {
-      position: absolute;
-      z-index: 1;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      padding: 13px;
-      transition: opacity .8s cubic-bezier(0, 0.02, 0, 1);
-      opacity: var(--opacity);
-      font-family: 'Orelo-sw-db', serif;
-      transition: background 0.5s;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      
-      /* --------------------------------- */
+    /* glass efect end--------------- */
 
-     
+    .carousel-box {
+        position: absolute;
+        background-color: black;
+        top: 1.2%;
+        left: 1%;
+        width: 98%;
+        height: 98%;
+        border-radius: 5%;
+        padding: 13px;
+        transition: opacity .8s cubic-bezier(0, 0.02, 0, 1);
+        opacity: var(--opacity);
+        font-family: 'Orelo-sw-db', serif;
+        transition: background 0.5s;
+
+        /* --------------------------------- */
+
+
     }
-  
+
+    .carousel-box::before {
+
+
+        content: '';
+        position: absolute;
+        inset: 0;
+        left: -5px;
+        margin: auto;
+        width: 200px;
+        height: 264px;
+        border-radius: 10px;
+        background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
+        z-index: -10;
+        pointer-events: none;
+        transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+            /* --------------------------------- */
+
+
+    }
+
+    .carousel-box::after {
+
+        content: "";
+        z-index: -1;
+        border-radius: 5%;
+        position: absolute;
+        inset: 0;
+        transform: translate3d(0, 0, 0) scale(1.5);
+        background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100%);
+        filter: blur(20px);
+
+
+    }
+
+
     .title {
-      position: absolute;
-      z-index: 1;
-      color: #fff;
-      bottom: 20px;
-      left: 20px;
-      transition: opacity .8s cubic-bezier(0, 0.02, 0, 1);
-      font-size: clamp(20px, 3vw, 30px);
-      text-shadow: 0 4px 4px rgba(0, 0, 0, .1);
+        position: absolute;
+        z-index: 1;
+        color: #fff;
+        bottom: 20px;
+        left: 20px;
+        transition: opacity .8s cubic-bezier(0, 0.02, 0, 1);
+        font-size: clamp(20px, 3vw, 30px);
+        text-shadow: 0 4px 4px rgba(0, 0, 0, .1);
     }
-  
+
     .num {
-      position: absolute;
-      z-index: 1;
-      color: #fff;
-      top: 10px;
-      left: 20px;
-      transition: opacity .8s cubic-bezier(0, 0.02, 0, 1);
-      font-size: clamp(20px, 10vw, 80px);
+        position: absolute;
+        z-index: 1;
+        color: #fff;
+        top: 10px;
+        left: 20px;
+        transition: opacity .8s cubic-bezier(0, 0.02, 0, 1);
+        font-size: clamp(20px, 10vw, 80px);
     }
-  
+
     img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      pointer-events: none;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        pointer-events: none;
     }
-  }
-  
-  .layout {
+}
+
+.layout {
     position: absolute;
     z-index: 0;
     top: 0;
@@ -105,24 +139,24 @@
     width: 100%;
     height: 100%;
     pointer-events: none;
-  
-   
-  
+
+
+
     .box {
-      position: absolute;
-      bottom: 0;
-      left: 30px;
-      color: #fff;
-      transform-origin: 0% 10%;
-      transform: rotate(-90deg);
-      font-size: 9px;
-      line-height: 1.4;
-      text-transform: uppercase;
-      opacity: .4;
+        position: absolute;
+        bottom: 0;
+        left: 30px;
+        color: #fff;
+        transform-origin: 0% 10%;
+        transform: rotate(-90deg);
+        font-size: 9px;
+        line-height: 1.4;
+        text-transform: uppercase;
+        opacity: .4;
     }
-  }
-  
-  .logo {
+}
+
+.logo {
     position: absolute;
     z-index: 2;
     top: 28px;
@@ -142,29 +176,29 @@
     font-size: 20px;
     overflow: hidden;
     padding-bottom: .1em;
-  }
-  
-  .social {
+}
+
+.social {
     position: absolute;
     z-index: 10;
     bottom: 20px;
     right: 25px;
     color: #fff;
     opacity: .4;
-  
+
     a {
-      display: inline-block;
-      margin-left: 3px;
+        display: inline-block;
+        margin-left: 3px;
     }
-  
+
     svg {
-      --fill: #fff;
-      width: 35px;
-      height: 35px;
+        --fill: #fff;
+        width: 35px;
+        height: 35px;
     }
-  }
-  
-  .cursor {
+}
+
+.cursor {
     position: fixed;
     z-index: 10;
     top: 0;
@@ -178,14 +212,14 @@
     transition: transform .85s cubic-bezier(0, 0.02, 0, 1);
     display: none;
     pointer-events: none;
-    
+
     @media (pointer: fine) {
-      display: block;
+        display: block;
     }
-  }
-  
-  .cursor2 {
+}
+
+.cursor2 {
     --size: 2px;
     transition-duration: .7s;
-  }
-  
+}
+

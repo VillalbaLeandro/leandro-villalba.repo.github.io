@@ -24,7 +24,8 @@ window.onload = (event) => {
 
 
 
-  // carrusel
+  // 
+  
 /*--------------------
 Vars
 --------------------*/
@@ -52,7 +53,7 @@ const $cursors = document.querySelectorAll('.cursor')
 
 const displayItems = (item, index, active) => {
   const zIndex = getZindex([...$items], active)[index]
-  item.style.setProperty('--zIndex', zIndex)
+  item.style.setProperty('--zIndex', zIndex-2)
   item.style.setProperty('--active', (index-active)/$items.length)
 }
 

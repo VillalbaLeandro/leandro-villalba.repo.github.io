@@ -38,6 +38,19 @@ h2 {
 h2:hover {
     background-position: 100% 0;
 }
+h3 {
+    font-size: 90%;
+    margin-bottom: 6px;
+    background: linear-gradient(42deg, rgba(177, 80, 251, 1) 11%, rgba(118, 130, 237, 1) 50%, rgba(48, 210, 223, 1) 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    transition: background-position 0.5s;
+}
+
+h3:hover {
+    background-position: 100% 0;
+}
 
 p {
     font-size: 77%;
@@ -85,3 +98,5 @@ p {
     color: white;
 
 }
+
+
