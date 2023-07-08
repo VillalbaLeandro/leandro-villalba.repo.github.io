@@ -1,0 +1,122 @@
+:root {
+    --icon: rgb(211, 210, 208);
+    --blue-bg: rgb(10, 8, 31);
+    --gradient: linear-gradient(42deg, rgba(177, 80, 251, 1) 11%, rgba(118, 130, 237, 1) 50%, rgba(48, 210, 223, 1) 80%);
+    --iconNavbar:  rgb(82, 37, 86);
+}
+
+/* Google Fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.menuNavbarMobile {
+    position: fixed;
+    top: 83vh;
+    z-index: 100;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 90vw;
+    max-width: 500px;
+}
+
+nav {
+    border-radius: 32px;
+    background: var(--gradient);
+    padding: 0 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 1);
+    border: 9px solid var(--blue-bg);
+
+}
+
+.nav-content {
+    display: flex;
+    height: 81px;
+    align-items: center;
+    list-style: none;
+    position: relative;
+    justify-content: space-evenly;
+}
+
+.link-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 75px;
+    width: 65px;
+    text-decoration: none;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.link-item.active {
+    transform: translateY(-10px);
+}
+
+.link-icon {
+    font-size: 35px;
+    color: var(--blue-bg);
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.link-item.active .link-icon {
+    color: var(--iconNavbar);
+    background-size: 200% 100%;
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+
+}
+
+.link-text {
+    position: absolute;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--iconNavbar);
+    background-size: 200% 100%;
+    opacity: 0;
+    transform: translateY(32px);
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.link-item.active .link-text {
+    opacity: 1;
+}
+
+.indicator {
+    position: absolute;
+    top: -21px;
+    left: 13px;
+    height: 30px;
+    width: 30px;
+    background-color: var(--iconNavbar);
+    border: 6px solid var(--blue-bg);
+    border-radius: 50%;
+    transform: translateX(-50%);
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.indicator::before,
+.indicator::after {
+    content: '';
+    position: absolute;
+    bottom: -9px;
+    height: 14px;
+    width: 21px;
+}
+
+.indicator::before {
+    left: -20px;
+    border-top-right-radius: 23px;
+    box-shadow: 1px -7px var(--blue-bg);
+}
+
+.indicator::after {
+    right: -20px;
+    border-top-left-radius: 23px;
+    box-shadow: -1px -7px var(--blue-bg);
+}

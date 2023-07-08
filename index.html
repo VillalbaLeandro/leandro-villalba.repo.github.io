@@ -9,10 +9,15 @@
     <script src="https://kit.fontawesome.com/fc1047b7d0.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./public/css/header.css">
     <link rel="stylesheet" href="./public/css/carousel.css">
+    <link rel="stylesheet" href="./public/css/menuNavbarMobile.css">
     //font montserrat
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Wix+Madefor+Display:wght@400;500;600&display=swap"
         rel="stylesheet">
+
+        <!-- Boxicons CSS Menu navbar mobile -->
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+        
 </head>
 
 <body>
@@ -20,57 +25,7 @@
         <div class="logo-container">
             <a href="./index.html"> <img src="./public/img/logo-white.png" alt="logo AppSolutions"></a>
         </div>
-        <div class="burguer-navbar-container">
-            <div class="menu-container">
-                <div class="menu-hamburguesa-container">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
-                <div class="menu-navbar">
-                    <ul>
-                        <li>
-                            <p><a href="./index.html">
-                                    Home
-                                </a>
-                            </p>
-                        </li>
-                        <li>
-                            <p><a href="#about-me">
-                                    About me
-                                </a>
-                            </p>
-                        </li>
-                        <li>
-                            <p><a href="#skills">
-                                    Skills
 
-                                </a>
-                            </p>
-                        </li>
-                        <li>
-                            <p><a href="#ubicacion">
-                                    Projects
-
-                                </a>
-                            </p>
-                        </li>
-                        <li>
-                            <p><a href="#redes">
-                                    Studies
-                                </a>
-                            </p>
-                        </li>
-                        <li>
-                            <p><a href="#redes">
-                                    Contact
-
-                                </a>
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
     </header>
     <main>
         <div class="block block1" id="block1">
@@ -215,10 +170,51 @@
         </div>
 
     </main>
+    <div class="menuNavbarMobile">
+        
+        <nav class="nav">
+            <ul class="nav-content">
+                <li class="nav-list">
+                    <a href="#" class="link-item active">
+                        <i class='bx bxs-home link-icon'></i>
+                        <span class="link-text">Home</span>
+                    </a>
+                </li>
+                <li class="nav-list">
+                    <a href="#" class="link-item">
+                        <i class='bx bxs-caret-right-square link-icon'></i>
+                        <span class="link-text">Content</span>
+                    </a>
+                </li>
+                <li class="nav-list">
+                    <a href="#skills" class="link-item">
+                        <i class='bx bxs-bar-chart-square link-icon'></i>
+                        <span class="link-text">Skills</span>
+                    </a>
+                </li>
+                <li class="nav-list">
+                    <a href="#" class="link-item">
+                        <i class='bx bxs-message-rounded link-icon'></i>
+                        <span class="link-text">Comments</span>
+                    </a>
+                </li>
+                <li class="nav-list">
+                    <a href="#" class="link-item">
+                        <i class='bx bxs-user link-icon'></i>
+                        <span class="link-text">Profile</span>
+                    </a>
+                </li>
+    
+                <span class="indicator"></span>
+            </ul>
+        </nav>
+    </div>
+
     <footer>
 
     </footer>
     <script src="./public/js/script.js"></script>
+    <script src="./public/js/menuNavbarMobile.js"></script>
 </body>
 
 </html>
