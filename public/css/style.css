@@ -23,8 +23,32 @@ h1 {
     font-size: 118%;
     margin-bottom: 4px;
 }
+@keyframes gradient {
+    0% {
+        background-position: 0% 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
 
 h2 {
+    font-size: 150%;
+    margin-bottom: 6px;
+    background: linear-gradient(42deg, rgba(177, 80, 251, 1) 11%, rgba(118, 130, 237, 1) 50%, rgba(48, 210, 223, 1) 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    animation: gradient 2.5s infinite alternate;
+    text-align: center;
+}
+
+
+
+
+
+/* efecto hover para desktop */
+/* h2 {
     font-size: 150%;
     margin-bottom: 6px;
     background: linear-gradient(42deg, rgba(177, 80, 251, 1) 11%, rgba(118, 130, 237, 1) 50%, rgba(48, 210, 223, 1) 80%);
@@ -37,7 +61,7 @@ h2 {
 
 h2:hover {
     background-position: 100% 0;
-}
+} */
 h3 {
     font-size: 90%;
     margin-bottom: 6px;
