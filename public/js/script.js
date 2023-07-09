@@ -1,26 +1,14 @@
+
+function hideAddressBar(){
+  if(document.documentElement.scrollHeight<window.outerHeight/window.devicePixelRatio)
+    document.documentElement.style.height=(window.outerHeight/window.devicePixelRatio)+'px';
+  setTimeout(window.scrollTo(1,1),0);
+}
+window.addEventListener("load",function(){hideAddressBar();});
+window.addEventListener("orientationchange",function(){hideAddressBar();});
+
 window.onload = (event) => {
 
-  // const menuHamburguesa = document.querySelector(".menu-hamburguesa-container");
-  // const menuContainer = document.querySelector(".menu-container");
-  // const menuNavbar = document.querySelector(".menu-navbar");
-
-
-  // // opacity: 1;
-  // // background-color: black;
-  // // left: 0;
-  // menuHamburguesa.addEventListener(`click` ,()=>{
-  //     menuNavbar.style.opacity = 1;
-  //     menuNavbar.style.backgroundColor = "rgb(4, 2, 22)";
-  //     menuNavbar.style.left = 0;
-  //     menuNavbar.style.boxShadow = "18px 16px 20px -5px rgba(0,0,0,0.75)";
-      
-  // })
-  // menuNavbar.addEventListener(`mouseleave` ,()=>{
-  //     menuNavbar.style.opacity = 0;
-  //     menuNavbar.style.backgroundColor = "null";
-  //     menuNavbar.style.left = "-100%";
-      
-  // })
 
 
 // carrusel
@@ -118,20 +106,20 @@ document.addEventListener('touchstart', handleMouseDown);
 document.addEventListener('touchmove', handleMouseMove);
 document.addEventListener('touchend', handleMouseUp);
 
-// Verificar si el navegador admite el modo de pantalla completa
-if (window.navigator.standalone || window.matchMedia('(display-mode: standalone)').matches) {
-  // El navegador ya se encuentra en modo de pantalla completa o en una aplicación independiente
-} else if (window.navigator.userAgent.indexOf('Android') !== -1 && 'requestFullscreen' in document.documentElement) {
-  // Para Android, utilizar el modo de pantalla completa
-  document.documentElement.requestFullscreen();
-} else if (window.navigator.userAgent.indexOf('iPhone') !== -1 && 'standalone' in window.navigator) {
-  // Para iOS, abrir en la pantalla de inicio (modo de pantalla completa)
-  var addToHomeScreen = confirm('Agregar a la pantalla de inicio?');
-  if (addToHomeScreen) {
-    // Redirigir a la página de inicio para abrir en el modo de pantalla completa
-    window.location.href = '/index.html'; // Reemplaza "/" con la ruta de tu página de inicio
-  }
-}
+// // Verificar si el navegador admite el modo de pantalla completa
+// if (window.navigator.standalone || window.matchMedia('(display-mode: standalone)').matches) {
+//   // El navegador ya se encuentra en modo de pantalla completa o en una aplicación independiente
+// } else if (window.navigator.userAgent.indexOf('Android') !== -1 && 'requestFullscreen' in document.documentElement) {
+//   // Para Android, utilizar el modo de pantalla completa
+//   document.documentElement.requestFullscreen();
+// } else if (window.navigator.userAgent.indexOf('iPhone') !== -1 && 'standalone' in window.navigator) {
+//   // Para iOS, abrir en la pantalla de inicio (modo de pantalla completa)
+//   var addToHomeScreen = confirm('Agregar a la pantalla de inicio?');
+//   if (addToHomeScreen) {
+//     // Redirigir a la página de inicio para abrir en el modo de pantalla completa
+//     window.location.href = '/index.html'; // Reemplaza "/" con la ruta de tu página de inicio
+//   }
+// }
 
 
 
