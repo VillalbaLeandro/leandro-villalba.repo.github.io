@@ -15,7 +15,7 @@ header {
     align-items: center;
     justify-content: space-around;
     box-shadow: -2px 15px 20px -5px rgba(0, 0, 0, 0.75);
-    padding: 25px 33px;
+    padding: 12px 33px;
 }
 
 
@@ -67,6 +67,7 @@ header {
 .gifs-container {
     width: 10%;
     max-width: 100px;
+    transform: translateX(30px);
 }
 
 a {
