@@ -118,11 +118,21 @@ document.addEventListener('touchstart', handleMouseDown);
 document.addEventListener('touchmove', handleMouseMove);
 document.addEventListener('touchend', handleMouseUp);
 
-if (navigator.userAgent.match(/android/i)) {
-  window.scrollTo(0, 1);
+// Verificar si el navegador admite el modo de pantalla completa
+if (window.navigator.standalone || window.matchMedia('(display-mode: standalone)').matches) {
+  // El navegador ya se encuentra en modo de pantalla completa o en una aplicación independiente
+} else if (window.navigator.userAgent.indexOf('Android') !== -1 && 'requestFullscreen' in document.documentElement) {
+  // Para Android, utilizar el modo de pantalla completa
+  document.documentElement.requestFullscreen();
+} else if (window.navigator.userAgent.indexOf('iPhone') !== -1 && 'standalone' in window.navigator) {
+  // Para iOS, abrir en la pantalla de inicio (modo de pantalla completa)
+  var addToHomeScreen = confirm('Agregar a la pantalla de inicio?');
+  if (addToHomeScreen) {
+    // Redirigir a la página de inicio para abrir en el modo de pantalla completa
+    window.location.href = '/index.html'; // Reemplaza "/" con la ruta de tu página de inicio
+  }
 }
 
-if(navigator.userAgent.match(/android">android/i)){ window.scrollTo(0,1); }
 
 
 };
