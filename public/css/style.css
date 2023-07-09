@@ -83,9 +83,7 @@ p {
     line-height: 1.4;
 }
 
-.block {
-    height: 100vh;
-}
+
 
 .block1 {
     background: var(--blue-bg);
