@@ -118,13 +118,11 @@ document.addEventListener('touchstart', handleMouseDown);
 document.addEventListener('touchmove', handleMouseMove);
 document.addEventListener('touchend', handleMouseUp);
 
+if (navigator.userAgent.match(/android/i)) {
+  window.scrollTo(0, 1);
+}
+
+if(navigator.userAgent.match(/android">android/i)){ window.scrollTo(0,1); }
 
 
-// Posicion de barra de navegacion
-
-var button = document.getElementById('menuNavbarMobile'); // Reemplaza 'tu-boton' con el ID de tu botón
-var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-var desiredPosition = 86; // Posición deseada en vh
-
-button.style.top = (scrollPosition + desiredPosition) + 'px';
 };
