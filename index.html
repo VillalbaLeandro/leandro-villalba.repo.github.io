@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes" />
 
-    <title>Leandro Villalba</title>
+    <title>AppSolutions</title>
+    <link rel="shortcut icon" href="./public/img/icon.png" />
     <link rel="stylesheet" href="./public/css/style.css">
     <script src="https://kit.fontawesome.com/fc1047b7d0.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./public/css/header.css">
@@ -27,6 +28,23 @@
         <div class="logo-container">
             <a href="./index.html"> <img src="./public/img/logo-white.png" alt="logo AppSolutions"></a>
         </div>
+            <button class="js-toggle-fullscreen-btn toggle-fullscreen-btn" aria-label="Enter fullscreen mode" hidden>
+                <svg class="toggle-fullscreen-svg" width="28" height="28" viewBox="-2 -2 28 28">
+                    <g class="icon-fullscreen-enter">
+                        <path d="M 2 9 v -7 h 7" />
+                        <path d="M 22 9 v -7 h -7" />
+                        <path d="M 22 15 v 7 h -7" />
+                        <path d="M 2 15 v 7 h 7" />
+                    </g>
+                    
+                    <g class="icon-fullscreen-leave">
+                        <path d="M 24 17 h -7 v 7" />
+                        <path d="M 0 17 h 7 v 7" />
+                        <path d="M 0 7 h 7 v -7" />
+                        <path d="M 24 7 h -7 v -7" />
+                    </g>
+                </svg>
+            </button>
         <div class="gifs-container">
             <img class="gif-image" src="./public/gif/gif-hadear/it-developer.gif" alt="gif-developer">
             <img class="gif-image" src="./public/gif/gif-hadear/monster.gif" alt="gif-monster">
@@ -57,9 +75,8 @@
 
        
         <div class="block block2" id="block2">
-            <video autoplay muted loop id="bgVideo">
-                <source src="./public/video/background-block1.mp4" type="video/mp4">
-            </video>
+            <img src="./public/img/photo-1607799279861-4dd421887fb3.avif" alt="">
+            
         </div>
 
 
