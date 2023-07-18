@@ -125,8 +125,9 @@ header {
 
 .gifs-container {
     width: 10%;
-    max-width: 100px;
+    max-width: 50px;
     transform: translateX(30px);
+
 }
 
 a {
@@ -147,6 +148,7 @@ i {
     max-width: 500px;
     z-index: 10;
     transform: translatex(42px);
+    max-width: 180px;
 }
 
 .menu-hamburguesa-container {
