@@ -12,7 +12,7 @@
     border-radius: 10px;
 }
 .title-card-projetcs{
-    background: linear-gradient(42deg, rgba(177, 80, 251, 1) 11%, rgba(118, 130, 237, 1) 50%, rgba(48, 210, 223, 1) 80%);
+    background:linear-gradient(42deg, rgba(177, 80, 251, 1) -14%, rgba(118, 130, 237, 1) 4%, rgba(48, 210, 223, 1) 139%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: 200% 100%;
@@ -28,6 +28,12 @@
     border-radius: 32px;
     color: var(--blue-bg);
     padding: 3px 10px;
+    transition: all 0.3s;
+
+}
+.card-proyecto a:hover {
+   
+    transform: scale(1.1);
 
 
 }
